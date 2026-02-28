@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import type { MenuItem } from "@/lib/types";
+import { SITE_INFO } from "@/lib/data";
 
 interface Props {
   items: MenuItem[];
@@ -12,7 +13,6 @@ interface Props {
 function MenuRow({ item }: { item: MenuItem }) {
   return (
     <div className="flex gap-4 py-5 border-b border-[#E8E4DF] last:border-0 group">
-      {/* Thumbnail */}
       {item.imageUrl && (
         <div className="relative w-20 h-20 rounded-sm overflow-hidden shrink-0 bg-[#E8E4DF]">
           <Image
@@ -24,7 +24,6 @@ function MenuRow({ item }: { item: MenuItem }) {
           />
         </div>
       )}
-      {/* Details */}
       <div className="flex-1 min-w-0">
         <div className="flex items-start justify-between gap-2">
           <h3
@@ -33,7 +32,9 @@ function MenuRow({ item }: { item: MenuItem }) {
           >
             {item.title}
           </h3>
-          <span className="text-[#C74200] font-bold text-base shrink-0">${item.price}</span>
+          <span className="text-[#C74200] font-bold text-base shrink-0">
+            {item.priceDisplay ?? `$${item.price}`}
+          </span>
         </div>
         <p className="text-[#6B6B6B] text-sm mt-1 leading-relaxed">{item.content}</p>
       </div>
@@ -43,13 +44,11 @@ function MenuRow({ item }: { item: MenuItem }) {
 
 export default function FullMenu({ items, categories }: Props) {
   const [active, setActive] = useState(categories[0]?.slug ?? "");
-
   const filtered = items.filter((item) => item.category.slug === active);
 
   return (
     <section className="section-pad bg-[#FAF9F6]">
       <div className="container-site max-w-3xl">
-        {/* Header */}
         <div className="text-center mb-12">
           <p className="text-[#C74200] text-sm tracking-[0.25em] uppercase font-semibold mb-3">
             Thai &amp; Japanese Fusion
@@ -62,7 +61,6 @@ export default function FullMenu({ items, categories }: Props) {
           </h1>
         </div>
 
-        {/* Category tabs */}
         <div className="flex flex-wrap gap-2 mb-10 border-b border-[#E8E4DF] pb-6">
           {categories.map((cat) => (
             <button
@@ -80,7 +78,6 @@ export default function FullMenu({ items, categories }: Props) {
           ))}
         </div>
 
-        {/* Items */}
         <div>
           {filtered.length > 0 ? (
             filtered.map((item) => <MenuRow key={item.slug} item={item} />)
@@ -89,7 +86,6 @@ export default function FullMenu({ items, categories }: Props) {
           )}
         </div>
 
-        {/* Order CTA */}
         <div className="mt-14 p-8 bg-[#1C1C1C] text-white text-center rounded-sm">
           <p className="text-white/60 text-xs tracking-widest uppercase mb-2">Ready to eat?</p>
           <h3
@@ -99,7 +95,7 @@ export default function FullMenu({ items, categories }: Props) {
             Order for Pickup or Delivery
           </h3>
           <a
-            href="https://www.spoton.com/order/thai-nigiri"
+            href={SITE_INFO.orderUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#C74200] hover:bg-[#9E3500] text-white font-semibold px-6 py-3 rounded-sm transition-colors"

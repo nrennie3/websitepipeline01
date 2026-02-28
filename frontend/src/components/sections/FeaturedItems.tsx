@@ -38,7 +38,7 @@ function MenuCard({ item }: { item: MenuItem }) {
             {item.title}
           </h3>
           <span className="text-[#C74200] font-bold text-lg shrink-0">
-            ${item.price}
+            {item.priceDisplay ?? `$${item.price}`}
           </span>
         </div>
         <p className="text-[#6B6B6B] text-sm leading-relaxed line-clamp-2">

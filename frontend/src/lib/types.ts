@@ -8,6 +8,7 @@ export interface MenuItem {
   title: string;
   content: string;
   price: number;
+  priceDisplay?: string; // overrides "$price" when set, e.g. "From $18"
   isFeatured: boolean;
   category: MenuCategory;
   imageUrl?: string;
