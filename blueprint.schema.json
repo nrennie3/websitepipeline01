@@ -7,6 +7,7 @@
   "required": ["site", "sitemap", "contentModel", "designTokens", "sections", "integrations"],
   "additionalProperties": false,
   "properties": {
+    "$schema": { "type": "string" },
     "site": {
       "type": "object",
       "required": ["name", "domain", "tagline", "description", "locale", "timezone"],
