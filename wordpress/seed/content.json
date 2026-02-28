@@ -1,0 +1,83 @@
+{
+  "menuCategories": [
+    { "slug": "sushi-rolls",  "name": "Sushi Rolls"  },
+    { "slug": "thai-entrees", "name": "Thai Entrees" },
+    { "slug": "don-bowls",    "name": "Don Bowls"    },
+    { "slug": "ramen",        "name": "Ramen"        },
+    { "slug": "drinks",       "name": "Drinks"       }
+  ],
+  "menuItems": [
+    {
+      "slug": "dancing-salmon",
+      "title": "Dancing Salmon",
+      "content": "Fresh Atlantic salmon, cucumber, avocado, topped with seared salmon, jalapeño, and our house spicy mayo.",
+      "category": "sushi-rolls",
+      "price": 18,
+      "is_featured": true
+    },
+    {
+      "slug": "harvest-roll",
+      "title": "Harvest Roll",
+      "content": "Tempura sweet potato, cream cheese, and cucumber topped with avocado and a drizzle of teriyaki glaze.",
+      "category": "sushi-rolls",
+      "price": 10,
+      "is_featured": false
+    },
+    {
+      "slug": "hamachi-karma",
+      "title": "Hamachi Karma",
+      "content": "Yellowtail, jalapeño, and ponzu sauce. Clean, bright, and beautifully simple.",
+      "category": "sushi-rolls",
+      "price": 13,
+      "is_featured": true
+    },
+    {
+      "slug": "duck-curry",
+      "title": "Duck Curry",
+      "content": "Roasted duck breast in red coconut curry with lychee, pineapple, tomatoes, and Thai basil. Served with jasmine rice.",
+      "category": "thai-entrees",
+      "price": 25,
+      "is_featured": true
+    },
+    {
+      "slug": "mango-tango",
+      "title": "Mango Tango",
+      "content": "Crispy tofu or shrimp tossed in a house mango sauce with bell peppers, snap peas, and Thai basil. Served with jasmine rice.",
+      "category": "thai-entrees",
+      "price": 15,
+      "is_featured": true
+    },
+    {
+      "slug": "chashu-don",
+      "title": "Chashu Don",
+      "content": "Slow-braised pork belly over steamed rice with soft-boiled egg, pickled ginger, nori, and house tare.",
+      "category": "don-bowls",
+      "price": 15,
+      "is_featured": true
+    },
+    {
+      "slug": "unagi-don",
+      "title": "Unagi Don",
+      "content": "Grilled freshwater eel over steamed rice with house unagi sauce, sesame, and cucumber.",
+      "category": "don-bowls",
+      "price": 25,
+      "is_featured": false
+    },
+    {
+      "slug": "bento-box",
+      "title": "Bento Box",
+      "content": "Your choice of protein with miso soup, house salad, steamed rice, gyoza, and seasonal vegetable. Ask your server for today's protein selections.",
+      "category": "don-bowls",
+      "price": 25,
+      "is_featured": false
+    },
+    {
+      "slug": "tom-yum-ramen",
+      "title": "Tom Yum Ramen",
+      "content": "House-made broth blending Thai tom yum with Japanese tonkotsu. Topped with shrimp, mushrooms, lemongrass, and soft-boiled egg.",
+      "category": "ramen",
+      "price": 15,
+      "is_featured": false
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "$schema": "./blueprint.schema.json",
+  "site": {
+    "name": "Thai Nigiri",
+    "domain": "thainigiri.com",
+    "tagline": "Where Thailand Meets Japan",
+    "description": "A fusion restaurant in Downtown Sandpoint, ID combining bold Thai flavors with the delicate artistry of Japanese sushi.",
+    "locale": "en_US",
+    "timezone": "America/Los_Angeles"
+  },
+  "sitemap": [
+    {
+      "route": "/",
+      "title": "Home",
+      "template": "home",
+      "sections": ["Hero", "FeaturedItems", "About", "OrderCTA", "HoursLocation"],
+      "seo": {
+        "titleOverride": "Thai Nigiri | Thai & Japanese Fusion — Sandpoint, ID",
+        "description": "Thai Nigiri brings together bold Thai flavors and the art of Japanese sushi in the heart of Downtown Sandpoint, Idaho. Order online or visit us today.",
+        "schema": "Restaurant"
+      }
+    },
+    {
+      "route": "/menu",
+      "title": "Menu",
+      "template": "menu",
+      "sections": ["FullMenu"],
+      "seo": {
+        "description": "Explore our full menu of Thai curries, sushi rolls, ramen, don bowls, and more. Lunch and dinner served daily in Downtown Sandpoint."
+      }
+    },
+    {
+      "route": "/about",
+      "title": "About",
+      "template": "about",
+      "sections": ["About"],
+      "seo": {
+        "description": "Learn the story behind Thai Nigiri — a unique fusion of Thai and Japanese cuisine in the heart of Sandpoint, Idaho."
+      }
+    }
+  ],
+  "contentModel": {
+    "postTypes": [
+      {
+        "slug": "menu_item",
+        "label": "Menu Item",
+        "plural": "Menu Items",
+        "taxonomies": ["menu_category"],
+        "fields": [
+          { "key": "price", "label": "Price", "type": "number", "required": true },
+          { "key": "description", "label": "Description", "type": "textarea", "required": false },
+          { "key": "image", "label": "Image", "type": "image", "required": false },
+          { "key": "is_featured", "label": "Featured on Home Page", "type": "boolean", "required": false }
+        ]
+      }
+    ],
+    "taxonomies": [
+      {
+        "slug": "menu_category",
+        "label": "Menu Category",
+        "terms": [
+          { "slug": "sushi-rolls", "label": "Sushi Rolls" },
+          { "slug": "thai-entrees", "label": "Thai Entrees" },
+          { "slug": "don-bowls", "label": "Don Bowls" },
+          { "slug": "ramen", "label": "Ramen" },
+          { "slug": "drinks", "label": "Drinks" }
+        ]
+      }
+    ]
+  },
+  "designTokens": {
+    "colors": {
+      "brand": "#C74200",
+      "background": "#1C1C1C",
+      "surface": "#FAF9F6",
+      "text": "#1C1C1C",
+      "accent": "#4A7C59"
+    },
+    "typography": {
+      "headingFont": "Playfair Display",
+      "bodyFont": "Inter",
+      "baseSize": "16px"
+    },
+    "spacing": {
+      "base": "4px"
+    }
+  },
+  "sections": [
+    {
+      "id": "Hero",
+      "component": "Hero",
+      "allowedOn": ["home"],
+      "description": "Full-width hero with background image, tagline, and dual CTA buttons"
+    },
+    {
+      "id": "FeaturedItems",
+      "component": "FeaturedItems",
+      "allowedOn": ["home"],
+      "description": "Grid of featured menu items pulled from is_featured=true menu_items"
+    },
+    {
+      "id": "About",
+      "component": "About",
+      "allowedOn": ["home", "about"],
+      "description": "Two-column section: story copy and restaurant ambiance image"
+    },
+    {
+      "id": "OrderCTA",
+      "component": "OrderCTA",
+      "allowedOn": ["home", "menu"],
+      "description": "Full-width CTA banner driving users to online ordering"
+    },
+    {
+      "id": "HoursLocation",
+      "component": "HoursLocation",
+      "allowedOn": ["home"],
+      "description": "Business hours table, address, phone, and map embed"
+    },
+    {
+      "id": "FullMenu",
+      "component": "FullMenu",
+      "allowedOn": ["menu"],
+      "description": "Complete menu organized by category with prices"
+    }
+  ],
+  "integrations": {
+    "ordering": {
+      "provider": "SpotOn",
+      "url": "https://www.spoton.com/order/thai-nigiri"
+    },
+    "analytics": {
+      "provider": "Google Analytics 4",
+      "measurementId": "G-PLACEHOLDER"
+    },
+    "social": [
+      {
+        "platform": "Facebook",
+        "url": "https://www.facebook.com/thainigirisandpoint"
+      }
+    ]
+  }
+}

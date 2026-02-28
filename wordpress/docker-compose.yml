@@ -1,0 +1,63 @@
+services:
+  db:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  wordpress:
+    image: wordpress:6.7-php8.2-apache
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DEBUG: "1"
+    volumes:
+      - wp_data:/var/www/html
+      - ./plugins/thainigiri-site:/var/www/html/wp-content/plugins/thainigiri-site
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/wp-login.php"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  wpcli:
+    image: wordpress:cli-php8.2
+    depends_on:
+      wordpress:
+        condition: service_healthy
+    volumes:
+      - wp_data:/var/www/html
+      - ./plugins/thainigiri-site:/var/www/html/wp-content/plugins/thainigiri-site
+      - ./scripts:/scripts
+      - ./seed:/seed
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+    user: "33:33"
+    entrypoint: /bin/sh
+    command: -c "echo 'WP-CLI container ready. Run: docker compose run wpcli /scripts/setup.sh'"
+
+volumes:
+  db_data:
+  wp_data:
