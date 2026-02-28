@@ -13,7 +13,7 @@
       "additionalProperties": false,
       "properties": {
         "name": { "type": "string", "minLength": 1 },
-        "domain": { "type": "string", "format": "hostname" },
+        "domain": { "type": "string", "minLength": 1 },
         "tagline": { "type": "string", "minLength": 1 },
         "description": { "type": "string", "minLength": 1 },
         "locale": { "type": "string", "pattern": "^[a-z]{2}_[A-Z]{2}$" },
@@ -169,7 +169,7 @@
           "required": ["provider", "url"],
           "properties": {
             "provider": { "type": "string" },
-            "url": { "type": "string", "format": "uri" }
+            "url": { "type": "string", "pattern": "^https?://" }
           }
         },
         "analytics": {
@@ -186,7 +186,7 @@
             "required": ["platform", "url"],
             "properties": {
               "platform": { "type": "string" },
-              "url": { "type": "string", "format": "uri" }
+              "url": { "type": "string", "pattern": "^https?://" }
             }
           }
         }
