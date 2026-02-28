@@ -12,7 +12,7 @@ export const SITE_INFO: SiteInfo = {
   tagline: "Where Thailand Meets Japan",
   address: "209 N 1st Avenue, Sandpoint, ID 83864",
   phone: "(208) 265-2587",
-  orderUrl: "https://www.spoton.com/order/thai-nigiri",
+  orderUrl: "https://order.spoton.com/so-thai-nigiri-restaurant-21928/sandpoint-id/675c9438abe91faea7628646",
   facebookUrl: "https://www.facebook.com/thainigirisandpoint",
   hours: [
     { days: "Monday – Wednesday", lunch: "11:30 am – 2:30 pm", dinner: "4:00 pm – 8:00 pm" },
@@ -30,7 +30,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 18,
     isFeatured: true,
     category: { slug: "sushi-rolls", name: "Sushi Rolls" },
-    imageUrl: "https://images.unsplash.com/photo-1617196034183-421b4040ed20?w=600&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1648146207997-8a3ad0d00b97?w=600&q=80",
   },
   {
     slug: "hamachi-karma",
