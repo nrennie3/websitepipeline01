@@ -13,8 +13,8 @@ interface Props {
 function MenuRow({ item }: { item: MenuItem }) {
   return (
     <div className="flex gap-4 py-5 border-b border-[#E8E4DF] last:border-0 group">
-      {item.imageUrl && (
-        <div className="relative w-20 h-20 rounded-sm overflow-hidden shrink-0 bg-[#E8E4DF]">
+      <div className="relative w-20 h-20 rounded-sm overflow-hidden shrink-0 bg-[#E8E4DF]">
+        {item.imageUrl ? (
           <Image
             src={item.imageUrl}
             alt={item.title}
@@ -22,8 +22,10 @@ function MenuRow({ item }: { item: MenuItem }) {
             className="object-cover group-hover:scale-105 transition-transform duration-300"
             sizes="80px"
           />
-        </div>
-      )}
+        ) : (
+          <div className="absolute inset-0 bg-gradient-to-br from-[#E8E4DF] to-[#D4CFC9]" />
+        )}
+      </div>
       <div className="flex-1 min-w-0">
         <div className="flex items-start justify-between gap-2">
           <h3
