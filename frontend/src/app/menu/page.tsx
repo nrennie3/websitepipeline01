@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import FullMenu from "@/components/sections/FullMenu";
 import { MENU_ITEMS, MENU_CATEGORIES } from "@/lib/data";
+import { wpQuery } from "@/lib/graphql/client";
+import { ALL_MENU_ITEMS_QUERY } from "@/lib/graphql/queries";
+import { mapWpItem, type WpMenuItemNode } from "@/lib/graphql/mappers";
 
 export const metadata: Metadata = {
   title: "Menu",
@@ -14,6 +17,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function MenuPage() {
-  return <FullMenu items={MENU_ITEMS} categories={MENU_CATEGORIES} />;
+export default async function MenuPage() {
+  let items = MENU_ITEMS;
+
+  if (process.env.NEXT_PUBLIC_WP_API_URL) {
+    try {
+      const data = await wpQuery<{ menuItems: { nodes: WpMenuItemNode[] } }>(
+        ALL_MENU_ITEMS_QUERY,
+      );
+      items = data.menuItems.nodes.map(mapWpItem);
+    } catch {
+      // Fall back to static data
+    }
+  }
+
+  return <FullMenu items={items} categories={MENU_CATEGORIES} />;
 }

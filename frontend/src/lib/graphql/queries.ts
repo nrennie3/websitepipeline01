@@ -7,6 +7,7 @@ export const FEATURED_ITEMS_QUERY = /* GraphQL */ `
         content
         featuredImage { node { sourceUrl } }
         price
+        priceDisplay
         isFeatured
         menuCategories { nodes { slug name } }
       }
@@ -23,6 +24,7 @@ export const ALL_MENU_ITEMS_QUERY = /* GraphQL */ `
         content
         featuredImage { node { sourceUrl } }
         price
+        priceDisplay
         isFeatured
         menuCategories { nodes { slug name } }
       }

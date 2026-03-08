@@ -26,12 +26,15 @@ function thainigiri_register_graphql_fields(): void {
         },
     ] );
 
-    register_graphql_field( 'MenuItem', 'menuCategories', [
-        'type'        => [ 'list_of' => 'MenuCategory' ],
-        'description' => 'Menu categories for this item',
+    register_graphql_field( 'MenuItem', 'priceDisplay', [
+        'type'        => 'String',
+        'description' => 'Optional display label, e.g. "From $18". Null when not set.',
         'resolve'     => function( $post ) {
-            $terms = get_the_terms( $post->ID, 'menu_category' );
-            return $terms && ! is_wp_error( $terms ) ? $terms : [];
+            $val = get_post_meta( $post->ID, 'price_display', true );
+            return $val !== '' ? $val : null;
         },
     ] );
+
+    // Note: menuCategories connection is auto-registered by WPGraphQL
+    // because menu_category taxonomy has show_in_graphql => true.
 }

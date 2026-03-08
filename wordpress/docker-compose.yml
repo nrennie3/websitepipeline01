@@ -54,7 +54,7 @@ services:
       WORDPRESS_DB_NAME: wordpress
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
-    user: "33:33"
+    user: "0:0"
     entrypoint: /bin/sh
     command: -c "echo 'WP-CLI container ready. Run: docker compose run wpcli /scripts/setup.sh'"
 

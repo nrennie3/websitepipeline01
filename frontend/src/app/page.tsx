@@ -5,6 +5,9 @@ import About from "@/components/sections/About";
 import OrderCTA from "@/components/sections/OrderCTA";
 import HoursLocation from "@/components/sections/HoursLocation";
 import { FEATURED_ITEMS, SITE_INFO } from "@/lib/data";
+import { wpQuery } from "@/lib/graphql/client";
+import { FEATURED_ITEMS_QUERY } from "@/lib/graphql/queries";
+import { mapWpItem, type WpMenuItemNode } from "@/lib/graphql/mappers";
 
 export const metadata: Metadata = {
   title: "Thai Nigiri | Thai & Japanese Fusion — Sandpoint, ID",
@@ -18,11 +21,24 @@ export const metadata: Metadata = {
   },
 };
 
-export default function HomePage() {
+export default async function HomePage() {
+  let featuredItems = FEATURED_ITEMS;
+
+  if (process.env.NEXT_PUBLIC_WP_API_URL) {
+    try {
+      const data = await wpQuery<{ menuItems: { nodes: WpMenuItemNode[] } }>(
+        FEATURED_ITEMS_QUERY,
+      );
+      featuredItems = data.menuItems.nodes.map(mapWpItem);
+    } catch {
+      // Fall back to static data
+    }
+  }
+
   return (
     <>
       <Hero />
-      <FeaturedItems items={FEATURED_ITEMS} />
+      <FeaturedItems items={featuredItems} />
       <About />
       <OrderCTA />
       <HoursLocation />

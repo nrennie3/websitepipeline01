@@ -1,19 +1,441 @@
 {
   "menuCategories": [
-    { "slug": "sushi-rolls",  "name": "Sushi Rolls"  },
-    { "slug": "thai-entrees", "name": "Thai Entrees" },
-    { "slug": "don-bowls",    "name": "Don Bowls"    },
-    { "slug": "ramen",        "name": "Ramen"        },
-    { "slug": "drinks",       "name": "Drinks"       }
+    { "slug": "starters",            "name": "Starters"            },
+    { "slug": "thai-entrees",        "name": "Thai Entrees"        },
+    { "slug": "house-special-rolls", "name": "House Special Rolls" },
+    { "slug": "sushi-rolls",         "name": "Sushi Rolls"         },
+    { "slug": "nigiri-sashimi",      "name": "Nigiri & Sashimi"    },
+    { "slug": "chefs-specials",      "name": "Chef's Specials"     }
   ],
   "menuItems": [
+    {
+      "slug": "crab-rangoon",
+      "title": "Crab Rangoon (6)",
+      "content": "Crab meat, cream cheese, and onions in a wonton wrapper. Deep fried and served with plum sauce.",
+      "category": "starters",
+      "price": 10,
+      "is_featured": false
+    },
+    {
+      "slug": "fried-tofu",
+      "title": "Fried Tofu (6)",
+      "content": "Crispy fried tofu, served with plum sauce and peanuts on top.",
+      "category": "starters",
+      "price": 7.50,
+      "is_featured": false
+    },
+    {
+      "slug": "shrimp-in-a-blanket",
+      "title": "Shrimp in a Blanket (4)",
+      "content": "Deep fried shrimp wrapped in spring roll skin, served with plum sauce.",
+      "category": "starters",
+      "price": 11,
+      "is_featured": false
+    },
+    {
+      "slug": "shrimp-tempura-app",
+      "title": "Shrimp Tempura (6)",
+      "content": "Battered fried shrimp, served with plum and tempura sauce.",
+      "category": "starters",
+      "price": 12,
+      "is_featured": false
+    },
+    {
+      "slug": "gyoza",
+      "title": "Gyoza (6)",
+      "content": "Deep fried Japanese-style chicken pot stickers served with tempura sauce.",
+      "category": "starters",
+      "price": 8.50,
+      "is_featured": false
+    },
+    {
+      "slug": "edamame",
+      "title": "Edamame",
+      "content": "Steamed green soybeans with salt.",
+      "category": "starters",
+      "price": 6,
+      "is_featured": false
+    },
+    {
+      "slug": "spicy-edamame",
+      "title": "Spicy Edamame",
+      "content": "Steamed green soybeans with spicy seasoning.",
+      "category": "starters",
+      "price": 7.50,
+      "is_featured": false
+    },
+    {
+      "slug": "jalapeno-bomb",
+      "title": "Jalapeño Bomb (8)",
+      "content": "Deep-fried jalapeño, cream cheese, and spicy tuna. Served with yum yum, eel sauce, and sriracha.",
+      "category": "starters",
+      "price": 10.50,
+      "is_featured": false
+    },
+    {
+      "slug": "spirit-bomb",
+      "title": "Spirit Bomb (8)",
+      "content": "Deep fried avocado and crab meat on top of salad with special sauce.",
+      "category": "starters",
+      "price": 14,
+      "is_featured": false
+    },
+    {
+      "slug": "three-combo-appetizer",
+      "title": "Three Combo Appetizer",
+      "content": "Crab rangoons (3), gyozas (3), and jalapeño bomb (4 pcs). No substitutions.",
+      "category": "starters",
+      "price": 14.50,
+      "is_featured": false
+    },
+    {
+      "slug": "four-combo-appetizer",
+      "title": "Four Combo Appetizer",
+      "content": "Spring rolls (2), crab rangoons (2), jalapeño bomb (4 pcs), and shrimp in a blanket (2). No substitutions.",
+      "category": "starters",
+      "price": 16,
+      "is_featured": false
+    },
+    {
+      "slug": "pad-thai",
+      "title": "Pad Thai",
+      "content": "Thin rice noodles with choice of meat, eggs, bean sprouts, scallions, and crushed peanuts with house Pad Thai sauce. Chicken, pork, tofu, or vegetables $18 · Beef $19 · Shrimp $20 · Duck $26 · Salmon $27 · Combo $23.",
+      "category": "thai-entrees",
+      "price": 18,
+      "price_display": "From $18",
+      "is_featured": false
+    },
+    {
+      "slug": "pad-se-ew",
+      "title": "Pad Se-ew",
+      "content": "Stir fried flat rice noodles with choice of meat, eggs, broccoli, and carrots with Thai sweet soy sauce. Chicken, pork, tofu, or vegetables $18 · Beef $19 · Shrimp $20 · Duck $26 · Salmon $27 · Combo $23.",
+      "category": "thai-entrees",
+      "price": 18,
+      "price_display": "From $18",
+      "is_featured": false
+    },
+    {
+      "slug": "drunken-noodle",
+      "title": "Drunken Noodle",
+      "content": "Stir fried flat rice noodles with choice of meat, onions, bell peppers, bamboo shoots, and basil leaves with chili basil sauce. Chicken, pork, tofu, or vegetables $18 · Beef $19 · Shrimp $20 · Duck $26 · Salmon $27 · Combo $23.",
+      "category": "thai-entrees",
+      "price": 18,
+      "price_display": "From $18",
+      "is_featured": false
+    },
+    {
+      "slug": "pad-woon-sen",
+      "title": "Pad Woon-sen",
+      "content": "Stir fried glass noodles with eggs, choice of meat, green onions, onions, and mixed vegetables with Thai sauce. Chicken, pork, tofu, or vegetables $18 · Beef $19 · Shrimp $20 · Duck $26 · Salmon $27 · Combo $23.",
+      "category": "thai-entrees",
+      "price": 18,
+      "price_display": "From $18",
+      "is_featured": false
+    },
+    {
+      "slug": "red-curry",
+      "title": "Red Curry",
+      "content": "Red curry with a choice of meat, coconut milk, bell peppers, bamboo shoots, carrots, and basil leaves. Chicken, pork, tofu, or vegetables $18 · Beef $19 · Shrimp $20 · Duck $26 · Salmon $27 · Combo $23.",
+      "category": "thai-entrees",
+      "price": 18,
+      "price_display": "From $18",
+      "is_featured": false
+    },
+    {
+      "slug": "green-curry",
+      "title": "Green Curry",
+      "content": "Green curry with a choice of meat, coconut milk, bell peppers, bamboo shoots, carrots, peas, and basil leaves. Chicken, pork, tofu, or vegetables $18 · Beef $19 · Shrimp $20 · Duck $26 · Salmon $27 · Combo $23.",
+      "category": "thai-entrees",
+      "price": 18,
+      "price_display": "From $18",
+      "is_featured": false
+    },
+    {
+      "slug": "yellow-curry",
+      "title": "Yellow Curry",
+      "content": "Yellow curry with a choice of meat, coconut milk, pineapples, onions, potatoes, and carrots. Chicken, pork, tofu, or vegetables $18 · Beef $19 · Shrimp $20 · Duck $26 · Salmon $27 · Combo $23.",
+      "category": "thai-entrees",
+      "price": 18,
+      "price_display": "From $18",
+      "is_featured": false
+    },
+    {
+      "slug": "panang-curry",
+      "title": "Panang Curry",
+      "content": "Thai panang curry with a choice of meat, coconut milk, peanuts, peas, carrots, and kaffir lime leaves on a bed of steamed mixed vegetables. Chicken, pork, tofu, or vegetables $18 · Beef $19 · Shrimp $20 · Duck $26 · Salmon $27 · Combo $23.",
+      "category": "thai-entrees",
+      "price": 18,
+      "price_display": "From $18",
+      "is_featured": false
+    },
+    {
+      "slug": "duck-curry",
+      "title": "Duck Curry",
+      "content": "Roasted duck breast in red coconut curry with lychee, pineapple, tomatoes, and Thai basil. Served with jasmine rice.",
+      "category": "thai-entrees",
+      "price": 26,
+      "is_featured": true
+    },
+    {
+      "slug": "mango-tango",
+      "title": "Mango Tango",
+      "content": "Crispy tofu or shrimp tossed in a house mango sauce with bell peppers, snap peas, and Thai basil. Served with jasmine rice. Chicken, pork, tofu, or vegetables $18 · Beef $19 · Shrimp $20 · Duck $26 · Salmon $27 · Combo $23.",
+      "category": "thai-entrees",
+      "price": 18,
+      "price_display": "From $18",
+      "is_featured": true
+    },
+    {
+      "slug": "sweet-basil",
+      "title": "Sweet Basil",
+      "content": "Stir fried choice of meat, carrots, onions, bell peppers, and basil with chili basil sauce. Chicken, pork, tofu, or vegetables $18 · Beef $19 · Shrimp $20 · Duck $26 · Salmon $27 · Combo $23.",
+      "category": "thai-entrees",
+      "price": 18,
+      "price_display": "From $18",
+      "is_featured": false
+    },
+    {
+      "slug": "lava",
+      "title": "Lava",
+      "content": "Stir fried choice of meat, carrots, onions, scallion, broccoli, mushroom in spicy Thai sauce. Chicken, pork, tofu, or vegetables $18 · Beef $19 · Shrimp $20 · Duck $26 · Salmon $27 · Combo $23.",
+      "category": "thai-entrees",
+      "price": 18,
+      "price_display": "From $18",
+      "is_featured": false
+    },
+    {
+      "slug": "cashew-nut",
+      "title": "Cashew Nut",
+      "content": "Stir fried choice of meat, carrots, onions, celery, bell peppers, and cashews in spicy Thai sauce. Chicken, pork, tofu, or vegetables $18 · Beef $19 · Shrimp $20 · Duck $26 · Salmon $27 · Combo $23.",
+      "category": "thai-entrees",
+      "price": 18,
+      "price_display": "From $18",
+      "is_featured": false
+    },
+    {
+      "slug": "mix-vegetables",
+      "title": "Mix Vegetables",
+      "content": "Stir fried choice of meat and mixed vegetables in Thai sauce. Chicken, pork, tofu, or vegetables $18 · Beef $19 · Shrimp $20 · Duck $26 · Salmon $27 · Combo $23.",
+      "category": "thai-entrees",
+      "price": 18,
+      "price_display": "From $18",
+      "is_featured": false
+    },
+    {
+      "slug": "rama",
+      "title": "Rama",
+      "content": "Sauteed choice of meat with peanut sauce, mixed vegetables, and pineapples topped with ground peanuts and cilantro. Chicken, pork, tofu, or vegetables $18 · Beef $19 · Shrimp $20 · Duck $26 · Salmon $27 · Combo $23.",
+      "category": "thai-entrees",
+      "price": 18,
+      "price_display": "From $18",
+      "is_featured": false
+    },
+    {
+      "slug": "garlic-and-pepper",
+      "title": "Garlic and Pepper",
+      "content": "Stir fried choice of meat with garlic and pepper sauce, on a bed of mixed vegetables. Chicken, pork, tofu, or vegetables $18 · Beef $19 · Shrimp $20 · Duck $26 · Salmon $27 · Combo $23.",
+      "category": "thai-entrees",
+      "price": 18,
+      "price_display": "From $18",
+      "is_featured": false
+    },
+    {
+      "slug": "broccoli",
+      "title": "Broccoli",
+      "content": "Stir fried choice of meat with broccoli and carrot in Thai sauce. Chicken, pork, tofu, or vegetables $18 · Beef $19 · Shrimp $20 · Duck $26 · Salmon $27 · Combo $23.",
+      "category": "thai-entrees",
+      "price": 18,
+      "price_display": "From $18",
+      "is_featured": false
+    },
+    {
+      "slug": "ginger-delight",
+      "title": "Ginger Delight",
+      "content": "Stir fried choice of meat with ginger, onion, baby corn, celery, mushroom, and carrot in Thai sauce. Chicken, pork, tofu, or vegetables $18 · Beef $19 · Shrimp $20 · Duck $26 · Salmon $27 · Combo $23.",
+      "category": "thai-entrees",
+      "price": 18,
+      "price_display": "From $18",
+      "is_featured": false
+    },
+    {
+      "slug": "sweet-and-sour",
+      "title": "Sweet & Sour",
+      "content": "Stir fried choice of meat with onion, bell pepper, carrot, and pineapple in sweet & sour sauce. Chicken, pork, tofu, or vegetables $18 · Beef $19 · Shrimp $20 · Duck $26 · Salmon $27 · Combo $23.",
+      "category": "thai-entrees",
+      "price": 18,
+      "price_display": "From $18",
+      "is_featured": false
+    },
+    {
+      "slug": "thai-fried-rice",
+      "title": "Thai Fried Rice",
+      "content": "Stir fried rice, eggs, and onions with a choice of meat, topped with scallions and cilantro. Chicken, pork, tofu, or vegetables $18 · Beef $19 · Shrimp $20 · Duck $26 · Salmon $27 · Combo $23.",
+      "category": "thai-entrees",
+      "price": 18,
+      "price_display": "From $18",
+      "is_featured": false
+    },
+    {
+      "slug": "basil-fried-rice",
+      "title": "Basil Fried Rice",
+      "content": "Stir fried choice of meat with rice, eggs, basil, bell peppers, onions, and chili basil sauce, topped with scallions. Chicken, pork, tofu, or vegetables $18 · Beef $19 · Shrimp $20 · Duck $26 · Salmon $27 · Combo $23.",
+      "category": "thai-entrees",
+      "price": 18,
+      "price_display": "From $18",
+      "is_featured": false
+    },
+    {
+      "slug": "japanese-stir-fry",
+      "title": "Japanese Stir-Fry",
+      "content": "Stir fried choice of meat, mixed vegetables, bamboo, and scallions in Japanese-styled sauce. Chicken, pork, tofu, or vegetables $18 · Beef $19 · Shrimp $20 · Duck $26 · Salmon $27 · Combo $23.",
+      "category": "thai-entrees",
+      "price": 18,
+      "price_display": "From $18",
+      "is_featured": false
+    },
+    {
+      "slug": "pineapple-fried-rice",
+      "title": "Pineapple Fried Rice",
+      "content": "Stir fried rice, shrimp, chicken, eggs, peas and carrots, green onions, onions, cashews, and pineapples.",
+      "category": "thai-entrees",
+      "price": 22,
+      "is_featured": false
+    },
     {
       "slug": "dancing-salmon",
       "title": "Dancing Salmon",
       "content": "Fresh Atlantic salmon, cucumber, avocado, topped with seared salmon, jalapeño, and our house spicy mayo.",
-      "category": "sushi-rolls",
+      "category": "house-special-rolls",
       "price": 18,
       "is_featured": true
+    },
+    {
+      "slug": "avocado-roll",
+      "title": "Avocado Roll",
+      "content": "Crab and cucumbers topped with avocado.",
+      "category": "house-special-rolls",
+      "price": 12.50,
+      "is_featured": false
+    },
+    {
+      "slug": "baked-salmon-roll",
+      "title": "Baked Salmon",
+      "content": "Crab and avocado topped with baked salmon, yum yum, and eel sauce.",
+      "category": "house-special-rolls",
+      "price": 14.75,
+      "is_featured": false
+    },
+    {
+      "slug": "spicy-baked-yellowtail",
+      "title": "Spicy Baked Yellowtail",
+      "content": "Crab and avocado topped with spicy baked yellowtail, spicy mayo, yum yum, and eel sauce.",
+      "category": "house-special-rolls",
+      "price": 14.75,
+      "is_featured": false
+    },
+    {
+      "slug": "japanese-lasagna",
+      "title": "Japanese Lasagna",
+      "content": "Crab, avocado, cream cheese topped with baked crab.",
+      "category": "house-special-rolls",
+      "price": 13.75,
+      "is_featured": false
+    },
+    {
+      "slug": "alaska-roll",
+      "title": "Alaska Roll",
+      "content": "Crab, avocado, cucumbers topped with salmon, lemon, tobiko, and green onions.",
+      "category": "house-special-rolls",
+      "price": 15.25,
+      "is_featured": false
+    },
+    {
+      "slug": "hawaiian-roll",
+      "title": "Hawaiian Roll",
+      "content": "Crab, avocado, cucumbers topped with tuna, masago, and green onions.",
+      "category": "house-special-rolls",
+      "price": 15.25,
+      "is_featured": false
+    },
+    {
+      "slug": "rainbow-roll",
+      "title": "Rainbow Roll",
+      "content": "Crab, avocado, cucumbers topped with tuna, salmon, white fish, shrimp, and avocado.",
+      "category": "house-special-rolls",
+      "price": 16.25,
+      "is_featured": false
+    },
+    {
+      "slug": "rocky-mountain",
+      "title": "Rocky Mountain",
+      "content": "Crab, avocado, cucumbers topped with seaweed tempura and spicy tuna.",
+      "category": "house-special-rolls",
+      "price": 15.25,
+      "is_featured": false
+    },
+    {
+      "slug": "green-monster",
+      "title": "Green Monster",
+      "content": "Spicy tuna and cucumbers topped with avocado.",
+      "category": "house-special-rolls",
+      "price": 14.25,
+      "is_featured": false
+    },
+    {
+      "slug": "super-dragon-roll",
+      "title": "Super Dragon Roll (10)",
+      "content": "Crab, spicy tuna, and jalapeño topped with eel.",
+      "category": "house-special-rolls",
+      "price": 20,
+      "is_featured": false
+    },
+    {
+      "slug": "tuna-killer-roll",
+      "title": "Tuna Killer Roll",
+      "content": "Spicy tuna and cucumber topped with tuna, spicy mayo, and sriracha.",
+      "category": "house-special-rolls",
+      "price": 15.75,
+      "is_featured": false
+    },
+    {
+      "slug": "salmon-killer",
+      "title": "Salmon Killer",
+      "content": "Spicy salmon and cucumbers topped with salmon, spicy mayo, and sriracha.",
+      "category": "house-special-rolls",
+      "price": 15.75,
+      "is_featured": false
+    },
+    {
+      "slug": "unagi-bomb",
+      "title": "Unagi Bomb",
+      "content": "Spicy tuna, jalapeño tempura, cream cheese topped with eel and sriracha.",
+      "category": "house-special-rolls",
+      "price": 16.75,
+      "is_featured": false
+    },
+    {
+      "slug": "spider-man-roll",
+      "title": "Spider Man Roll (6)",
+      "content": "Spicy tuna, soft shell crab tempura, cucumbers, avocado, romaine topped with eel.",
+      "category": "house-special-rolls",
+      "price": 14.75,
+      "is_featured": false
+    },
+    {
+      "slug": "ninja-roll",
+      "title": "Ninja Roll",
+      "content": "Shrimp tempura, crab, cucumbers topped with eel and avocado.",
+      "category": "house-special-rolls",
+      "price": 16.75,
+      "is_featured": false
+    },
+    {
+      "slug": "sandpoint-roll",
+      "title": "Sandpoint Roll",
+      "content": "Salmon, cream cheese, avocado, deep-fried, topped with seared scallops.",
+      "category": "house-special-rolls",
+      "price": 16.75,
+      "is_featured": false
     },
     {
       "slug": "harvest-roll",
@@ -24,34 +446,226 @@
       "is_featured": false
     },
     {
+      "slug": "tuna-maki",
+      "title": "Tuna Maki",
+      "content": "Fresh tuna wrapped in seasoned rice and nori.",
+      "category": "sushi-rolls",
+      "price": 6.50,
+      "is_featured": false
+    },
+    {
+      "slug": "salmon-maki",
+      "title": "Salmon Maki",
+      "content": "Fresh salmon wrapped in seasoned rice and nori.",
+      "category": "sushi-rolls",
+      "price": 6.50,
+      "is_featured": false
+    },
+    {
+      "slug": "yellowtail-maki",
+      "title": "Yellowtail Maki",
+      "content": "Fresh yellowtail wrapped in seasoned rice and nori.",
+      "category": "sushi-rolls",
+      "price": 6.50,
+      "is_featured": false
+    },
+    {
+      "slug": "cucumber-maki",
+      "title": "Cucumber Maki",
+      "content": "Crisp cucumber wrapped in seasoned rice and nori.",
+      "category": "sushi-rolls",
+      "price": 5.25,
+      "is_featured": false
+    },
+    {
+      "slug": "avocado-maki",
+      "title": "Avocado Maki",
+      "content": "Creamy avocado wrapped in seasoned rice and nori.",
+      "category": "sushi-rolls",
+      "price": 5.25,
+      "is_featured": false
+    },
+    {
+      "slug": "california",
+      "title": "California Roll",
+      "content": "Crab, avocado, and cucumbers.",
+      "category": "sushi-rolls",
+      "price": 8.50,
+      "is_featured": false
+    },
+    {
+      "slug": "spicy-tuna",
+      "title": "Spicy Tuna Roll",
+      "content": "Spicy tuna with cucumbers.",
+      "category": "sushi-rolls",
+      "price": 9.50,
+      "is_featured": false
+    },
+    {
+      "slug": "spicy-yellowtail",
+      "title": "Spicy Yellowtail Roll",
+      "content": "Spicy yellowtail with cucumbers and sriracha.",
+      "category": "sushi-rolls",
+      "price": 9.50,
+      "is_featured": false
+    },
+    {
+      "slug": "spicy-salmon",
+      "title": "Spicy Salmon Roll",
+      "content": "Spicy salmon with cucumbers and sriracha.",
+      "category": "sushi-rolls",
+      "price": 9.50,
+      "is_featured": false
+    },
+    {
+      "slug": "philadelphia",
+      "title": "Philadelphia Roll",
+      "content": "Salmon, crab, cucumbers, avocado, and cream cheese.",
+      "category": "sushi-rolls",
+      "price": 10,
+      "is_featured": false
+    },
+    {
+      "slug": "shrimp-tempura-roll",
+      "title": "Shrimp Tempura Roll",
+      "content": "Shrimp tempura, crab, cucumbers, avocado, yum yum, and eel sauce.",
+      "category": "sushi-rolls",
+      "price": 10,
+      "is_featured": false
+    },
+    {
+      "slug": "tempura-ca",
+      "title": "Tempura CA (10)",
+      "content": "Crab and avocado, deep-fried whole roll with yum yum and eel sauce.",
+      "category": "sushi-rolls",
+      "price": 12.50,
+      "is_featured": false
+    },
+    {
+      "slug": "spicy-tuna-tempura",
+      "title": "Spicy Tuna Tempura (10)",
+      "content": "Spicy tuna and avocado, deep-fried whole roll with yum yum and eel sauce.",
+      "category": "sushi-rolls",
+      "price": 13.50,
+      "is_featured": false
+    },
+    {
+      "slug": "asparagus-tempura",
+      "title": "Asparagus Tempura (5)",
+      "content": "Asparagus tempura, cucumbers, and avocado with yum yum and eel sauce.",
+      "category": "sushi-rolls",
+      "price": 8.50,
+      "is_featured": false
+    },
+    {
       "slug": "hamachi-karma",
       "title": "Hamachi Karma",
       "content": "Yellowtail, jalapeño, and ponzu sauce. Clean, bright, and beautifully simple.",
-      "category": "sushi-rolls",
+      "category": "nigiri-sashimi",
       "price": 13,
       "is_featured": true
     },
     {
-      "slug": "duck-curry",
-      "title": "Duck Curry",
-      "content": "Roasted duck breast in red coconut curry with lychee, pineapple, tomatoes, and Thai basil. Served with jasmine rice.",
-      "category": "thai-entrees",
-      "price": 25,
-      "is_featured": true
+      "slug": "hamachi-nigiri",
+      "title": "Hamachi Nigiri (2 pc)",
+      "content": "Fresh yellowtail over hand-pressed seasoned rice.",
+      "category": "nigiri-sashimi",
+      "price": 7,
+      "is_featured": false
     },
     {
-      "slug": "mango-tango",
-      "title": "Mango Tango",
-      "content": "Crispy tofu or shrimp tossed in a house mango sauce with bell peppers, snap peas, and Thai basil. Served with jasmine rice.",
-      "category": "thai-entrees",
-      "price": 15,
-      "is_featured": true
+      "slug": "maguro-nigiri",
+      "title": "Maguro Nigiri (2 pc)",
+      "content": "Fresh tuna over hand-pressed seasoned rice.",
+      "category": "nigiri-sashimi",
+      "price": 7,
+      "is_featured": false
+    },
+    {
+      "slug": "scallop-nigiri",
+      "title": "Scallop Nigiri (2 pc)",
+      "content": "Fresh scallop over hand-pressed seasoned rice.",
+      "category": "nigiri-sashimi",
+      "price": 7,
+      "is_featured": false
+    },
+    {
+      "slug": "ebi-nigiri",
+      "title": "Ebi Nigiri (2 pc)",
+      "content": "Shrimp over hand-pressed seasoned rice.",
+      "category": "nigiri-sashimi",
+      "price": 5.50,
+      "is_featured": false
+    },
+    {
+      "slug": "kani-nigiri",
+      "title": "Kani Nigiri (2 pc)",
+      "content": "Crab stick over hand-pressed seasoned rice.",
+      "category": "nigiri-sashimi",
+      "price": 5,
+      "is_featured": false
+    },
+    {
+      "slug": "tobiko-nigiri",
+      "title": "Tobiko Nigiri (2 pc)",
+      "content": "Flying fish roe over hand-pressed seasoned rice.",
+      "category": "nigiri-sashimi",
+      "price": 6.50,
+      "is_featured": false
+    },
+    {
+      "slug": "unagi-nigiri",
+      "title": "Unagi Nigiri (2 pc)",
+      "content": "Grilled freshwater eel over hand-pressed seasoned rice.",
+      "category": "nigiri-sashimi",
+      "price": 7.50,
+      "is_featured": false
+    },
+    {
+      "slug": "sashimi",
+      "title": "Sashimi (5 pc)",
+      "content": "Five slices of one variety — tuna, salmon, yellowtail, or scallop.",
+      "category": "nigiri-sashimi",
+      "price": 13,
+      "is_featured": false
+    },
+    {
+      "slug": "sushi-sampler",
+      "title": "Sushi Sampler",
+      "content": "One piece each of tuna, salmon, yellowtail, and ebi nigiri.",
+      "category": "nigiri-sashimi",
+      "price": 13,
+      "is_featured": false
+    },
+    {
+      "slug": "sashimi-sampler",
+      "title": "Sashimi Sampler (9 pc)",
+      "content": "Three pieces each of tuna, salmon, and yellowtail.",
+      "category": "nigiri-sashimi",
+      "price": 23,
+      "is_featured": false
+    },
+    {
+      "slug": "sushi-deluxe",
+      "title": "Sushi Deluxe",
+      "content": "Two pieces each of tuna, salmon, yellowtail nigiri plus two special rolls.",
+      "category": "nigiri-sashimi",
+      "price": 50,
+      "is_featured": false
+    },
+    {
+      "slug": "sashimi-deluxe",
+      "title": "Sashimi Deluxe",
+      "content": "Tuna, salmon, yellowtail, scallop, and albacore with miso soup and salad.",
+      "category": "nigiri-sashimi",
+      "price": 50,
+      "is_featured": false
     },
     {
       "slug": "chashu-don",
       "title": "Chashu Don",
       "content": "Slow-braised pork belly over steamed rice with soft-boiled egg, pickled ginger, nori, and house tare.",
-      "category": "don-bowls",
+      "category": "chefs-specials",
       "price": 15,
       "is_featured": true
     },
@@ -59,15 +673,15 @@
       "slug": "unagi-don",
       "title": "Unagi Don",
       "content": "Grilled freshwater eel over steamed rice with house unagi sauce, sesame, and cucumber.",
-      "category": "don-bowls",
+      "category": "chefs-specials",
       "price": 25,
       "is_featured": false
     },
     {
       "slug": "bento-box",
       "title": "Bento Box",
-      "content": "Your choice of protein with miso soup, house salad, steamed rice, gyoza, and seasonal vegetable. Ask your server for today's protein selections.",
-      "category": "don-bowls",
+      "content": "Your choice of protein with miso soup, house salad, steamed rice, gyoza, and seasonal vegetable. Ask your server for today's selections.",
+      "category": "chefs-specials",
       "price": 25,
       "is_featured": false
     },
@@ -75,7 +689,7 @@
       "slug": "tom-yum-ramen",
       "title": "Tom Yum Ramen",
       "content": "House-made broth blending Thai tom yum with Japanese tonkotsu. Topped with shrimp, mushrooms, lemongrass, and soft-boiled egg.",
-      "category": "ramen",
+      "category": "chefs-specials",
       "price": 15,
       "is_featured": false
     }

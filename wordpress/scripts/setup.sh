@@ -6,13 +6,25 @@ set -euo pipefail
 
 WP="wp --allow-root --path=/var/www/html"
 
-echo "==> Waiting for WordPress to be ready..."
-until $WP core is-installed 2>/dev/null; do
-  echo "    WordPress not ready yet, retrying in 5s..."
+echo "==> Waiting for database to be ready..."
+until $WP db check 2>/dev/null; do
+  echo "    Database not ready yet, retrying in 5s..."
   sleep 5
 done
 
-echo "==> WordPress is ready."
+echo "==> Installing WordPress core (if needed)..."
+if ! $WP core is-installed 2>/dev/null; then
+  $WP core install \
+    --url="http://localhost:8080" \
+    --title="Thai Nigiri" \
+    --admin_user=admin \
+    --admin_password=admin \
+    --admin_email=admin@thainigiri.local \
+    --skip-email
+  echo "    WordPress installed. Admin: admin / admin"
+else
+  echo "    WordPress already installed, skipping."
+fi
 
 # ── Core settings ────────────────────────────────────────────────────────────
 echo "==> Configuring site settings..."

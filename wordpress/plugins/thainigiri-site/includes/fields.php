@@ -29,6 +29,13 @@ function thainigiri_register_fields(): void {
                 'instructions'  => 'Enter the price without the dollar sign (e.g. 15.00)',
             ],
             [
+                'key'           => 'field_menu_item_price_display',
+                'label'         => 'Price Display',
+                'name'          => 'price_display',
+                'type'          => 'text',
+                'instructions'  => 'Optional label shown instead of the numeric price, e.g. "From $18". Leave blank to use the numeric price.',
+            ],
+            [
                 'key'           => 'field_menu_item_is_featured',
                 'label'         => 'Featured on Home Page',
                 'name'          => 'is_featured',

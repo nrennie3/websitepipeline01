@@ -13,8 +13,8 @@ CONTENT_FILE="/seed/content.json"
 MAP_FILE="/seed/content-map.json"
 
 if ! command -v jq &>/dev/null; then
-  echo "ERROR: jq is required. Add it to the wpcli image or install it."
-  exit 1
+  echo "==> Installing jq..."
+  apk add --no-cache jq
 fi
 
 echo "==> Starting content seed..."
@@ -76,6 +76,10 @@ while IFS= read -r item; do
   FEATURED_VAL=0
   [ "$FEATURED" = "true" ] && FEATURED_VAL=1
   $WP post meta update "$ID" is_featured "$FEATURED_VAL"
+  PRICE_DISPLAY=$(echo "$item" | jq -r '.price_display // empty')
+  if [ -n "$PRICE_DISPLAY" ]; then
+    $WP post meta update "$ID" price_display "$PRICE_DISPLAY"
+  fi
 
   # Set taxonomy
   CAT_ID=$(jq -r --arg slug "$CATEGORY" '.menuCategories[$slug]' "$MAP_FILE")
